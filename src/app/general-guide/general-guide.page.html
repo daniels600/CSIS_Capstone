@@ -1,0 +1,272 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+      <ion-title>General guide</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="selectedItem">
+    <ion-segment-button value="capstoneInfo">
+      <ion-label>Capstone <br/> info</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="GuidesnRubrics">
+      <ion-label>Guides & <br/>Rubrics</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Presentation">
+      <ion-label>Presentation <br/> guide</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+
+  <div *ngIf="selectedItem == 'capstoneInfo'">
+    <div class="card">
+      <div class="item item-divider" id="head">
+        <h3 id="title">What is Capstone?</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        <a href="https://www.edglossary.org/capstone-project/" id='source'>The Glossary of Educational Reform</a> defines it this way: "It is a multi-faceted project that serves as a culminating academic and intellectual experience for students." This typically happens at the end of an academic program or learning pathway experience. <br/>
+        <b color="primary">Capstone projects</b> are generally designed to encourage students to think critically, solve challenging problems, and develop skills such as oral communication, public speaking, research skills, media literacy, teamwork, planning, self-sufficiency, or goal setting—i.e., skills that will help prepare them for graduate school, modern careers, and adult life. In most cases, the projects are also interdisciplinary, in the sense that they require students to apply skills or investigate issues across many different subject areas or domains of knowledge. Capstone projects also tend to encourage students to connect their projects to community issues or problems, and to integrate outside-of-school learning experiences, including activities such as interviews, scientific observations, or internships. source: The Glossary of Educational Reform
+      </div>
+      <h3 id="title">CS & MIS Capstone Options</h3>
+      <div class="item item-divider" style="margin-top: auto;">
+        <h3 id="title">CS - Applied</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        This is an option for both CS and MIS students. An applied capstone is the type that requires a student to demonstrate and apply skills to problem solving. Outcome of applied capstone can be an artifact, a piece of software or any solution oriented initiative that can be tested and used by clients / end users. e.g. A software that tracks the air quality in a densely populated area.
+      </div>
+
+      <div class="item item-divider" style="margin-top: auto;">
+        <h3 id="title">CS - Thesis</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        CS Thesis is also an option for both CS & MIS students. The main focus of a thesis is to provide answers to an hypothesis or create a scholarly document that questions an existing body of knowledge or contributes to a gap in knowledge. e.g. Does the Information Age mean we are losing important historical information?
+      </div>
+
+      <div class="item item-divider" style="margin-top: auto;">
+        <h3 id="title">Entrepreneurship</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        Entrepreneurship is another option that is open to both CS & MIS students. This is an instance where a student joins a team of other students to research into the viability of a startup idea. This is mainly handled by the Business Administration Department. See Dr. Sena Agyepong
+      </div>
+
+      <div class="item item-divider" style="margin-top: auto;">
+        <h3 id="title">BA - Applied</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        This is limited to only MIS students and is managed by the Business Administration Department. See the BA coordinator for further information.
+      </div>
+      <div class="item item-divider" style="margin-top: auto;">
+        <h3 id="title">BA - Thesis</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        This is another option limited to MIS students only and is managed by the Business Administration Department. See the BA coordinator for further information.
+      </div>
+    </div>
+
+  </div>
+
+  <div *ngIf="selectedItem == 'GuidesnRubrics'">
+    <div class="card">
+      <div class="item item-divider" id="head">
+        <h3 id="title">Research Ethics</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        All research to be conducted by students, faculty, staff, or research affiliates from other institutions must be approved by the Human Subjects Review Committee prior to primary data collection or project initiation. This committee is the Institutional Review Board (IRB) of Ashesi University. The purpose of this review is to ensure that the research activity is conducted with the safety of the human subject as its highest priority.The criteria for this review are in strict accord with international standards for the protection of human participants in academic research. <br/>
+        <a href="https://apps.ashesi.edu.gh/irb/" id='source'>read more on research ethics review process</a>
+
+      </div>
+      <h3 id="title">CS & MIS Capstone Options</h3>
+      <div class="item item-divider" style="margin-top: auto;">
+        <h3 id="title">CS - Applied</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        This is an option for both CS and MIS students. An applied capstone is the type that requires a student to demonstrate and apply skills to problem solving. Outcome of applied capstone can be an artifact, a piece of software or any solution oriented initiative that can be tested and used by clients / end users. e.g. A software that tracks the air quality in a densely populated area.
+      </div>
+
+      <div class="item item-divider" style="margin-top: auto;">
+        <h3 id="title">CS - Thesis</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        CS Thesis is also an option for both CS & MIS students. The main focus of a thesis is to provide answers to an hypothesis or create a scholarly document that questions an existing body of knowledge or contributes to a gap in knowledge. e.g. Does the Information Age mean we are losing important historical information?
+      </div>
+
+      <div class="item item-divider" style="margin-top: auto;">
+        <h3 id="title">Entrepreneurship</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        Entrepreneurship is another option that is open to both CS & MIS students. This is an instance where a student joins a team of other students to research into the viability of a startup idea. This is mainly handled by the Business Administration Department. See Dr. Sena Agyepong
+      </div>
+    </div>
+
+  </div>
+
+  <div *ngIf="selectedItem == 'Presentation'">
+    <h3 id='p-title'>Tips For Your Capstone Progress & Final Presentations</h3>
+    <div class="card">
+      <div class="item item-divider" id="head">
+        <h3 id="title">Guidelines For Presentation</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        As you prepare for your progress presentations and the final capstone presentations, please keep the following guidelines in mind.
+
+        <ol>
+          <li>
+            Even though you work on this project everytime and may have given several progress presentations, you should always assume that your audience knows nothing about your project and you should make sure you start with an appropriate but concise introduction. 
+            Time yourself when you practice <br/>
+            (the “rehearse timings” feature in PowerPoint will tell you how much time you spent on each slide).
+          </li>
+
+          <li>
+            Think through ahead of time how you want to present things, how you want to demonstrate your work, and be sure to practice, practice, practice! See the section about how to give effective technical presentations. Practice with friends who will give you good, constructive feedback.
+          </li>
+          <li>
+            For every presentation, ensure that you stay within the stipulated time (you will be cut off if you go over time). Live demos should be carefully rehearsed so that they are effective in demonstrating the most important aspect of your project without eating up too much time. Also think about how you can make use of videos, graphs from experiments, etc, to demonstrate key aspects of your project in a timely manner.
+          </li>
+
+          <li>
+            Speak with confidence and pay attention to your body language
+          </li>
+        </ol>
+
+      </div>
+      <div class="item item-divider" style="margin-top: auto;">
+        <h3 id="title">How To Give A Good Technical Presentation</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        A good technical presentation has the following properties:<br/>
+
+        <ul>
+          <li>
+            <h5>Good organization</h5>
+            <ul>
+              <li>At the most basic level, you need an introduction, the body, and a conclusion</li>
+            </ul>
+          </li>
+
+          <li>
+            <p>Appropriate technical content, delivered at the appropriate depth and in a clear and concise manner</p>
+            <ul>
+              <li>When you are delivering a talk to a technical audience (e.g. at a computer science conference, or a presentation to faculty and students in the computer science department), the audience wants and needs to know the technical details of your work in order to fully understand and assess your work. This is the “meat” of your presentation — don’t leave it out! E.g., describe your architecture, describe and demonstrate any algorithms you are using, describe your experiments, etc. Make it absolutely clear what work is your own, and what you are leveraging from third parties / prior work.</li>
+
+              <li>
+                Obviously, you need to take into consideration the time available in deciding the appropriate depth
+              </li>
+              <li>
+                The fact that you are providing technical details does not mean you should lose the audience in jargon. Think about how to present the work for the audience to understand. The next point can be helpful in this regard.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <p>Useful and high quality visual aids</p>
+            <ul>
+              <li>Your slides should be well organized, attractive, and make appropriate use of images, figures, and text. Convey the most important information and avoid excessive text.</li>
+
+              <li>Use appropriate visual aids to help convey technical details: images, graphs, diagrams, charts, images, even animations. Animations are particularly useful for demonstrating how an algorithm/procedure works. The use of videos is also sometimes helpful.</li>
+
+              <li>Avoid visual distractions: animated text and special effects are usually distracting and unnecessary</li>
+
+              <li>Ensure consistency in your slides: titles, font sizes, etc. Ensure that any items in a bulleted list are grammatically consistent and also use consistent punctuation. E.g. You can have a list of nouns, a list of adjectives, a list of verbs, a list of phrases, or a list of sentences. You should not have a list in which some items are nouns and other are sentences, or in which some items end with a period (full-stop) and others don’t.</li>
+            </ul>
+          </li>
+          <li>
+            <p>Well-rehearsed but natural delivery</p>
+            <ul>
+              <li>Think ahead of time about what you want to say on each slide and how you want to say it, and practice!</li>
+
+              <li>Although your presentation should be well-rehearsed, you should deliver it in as natural a manner as possible, well-paced, with appropriate pauses in speech, not memorized and recited.</li>
+
+              <li>Practice and ensure that you can give the presentation in the alloted time without rushing but still conveying all the information you need to convey</li>
+            </ul>
+          </li>
+        </ul>
+        <div>
+          <ul>
+            <li><a href="https://m.youtube.com/watch?v=LzIJFD-ddoI" id="b-links">How To Prepare an Oral Research Presentation (Michigan State University - Undergraduate Research)</a></li>
+
+            <li><a href="https://m.youtube.com/watch?v=-w66TglPRbc" id="b-links">How to give a technical presentation</a></li>
+          </ul>
+        </div>
+       
+      </div>
+
+      <div class="item item-divider" style="margin-top: auto;">
+        <h3 id="title-1">Examples of Good Technical <br/> Presentations</h3>
+      </div>
+      <div class="ion-padding" id="details">
+        Please see below for some examples of good technical presentations. For each one, find include a few points about why it’s a good presentation.
+
+        <ul>
+          <li>
+            GSET 2012 Final Presentation - Autonomic Cloud Computing.<a id="b-links" href="https://www.youtube.com/watch?v=f4LXYW4_le0">click here to watch video</a>  <br/>
+            This is a 10-minute presentation of a group software development project. Like our applied projects, this presentation focuses on the development of technology, as opposed to thesis research geared at answering a research question. Although it’s a group presentation, most of its positive qualities are applicable to individual presentations: 
+
+            <ul>
+              <li><b>Strong introduction:</b> They start by briefly stating what their project does and why it’s important</li>
+
+              <li><b>Relevant background information</b> needed to understand the work: They explain cloud computing, its relevance and advantages</li>
+
+              <li><b>Presentation of an overview of the project:</b>  They present the components of their project, and clearly indicate which parts were leveraged from other work, and which parts they did themselves. In particular, the image recognition algorithm they use was developed by others.</li>
+
+              <li><b>Clear identification of the problem that their work aims to solve:</b>They explain that the CBIR algorithm is computationally intensive and can take weeks, so they are adapting it to work in the cloud in order to speed it up. However, the cloud solution they are making use of (CometCloud) is a command-line program and not user friendly for the doctors to use. So their aim to to design a web application for the doctors to use, that incorporates the CometCloud framework and the CBIR algorithm.</li>
+
+              <li><b>Inclusion of technical details: </b> They don’t gloss over technical details, but rather present relevant technical details at an appropriate level of depth for the audience to be able to understand their work. E.g. Early on, they briefly describe how the CBIR algorithm works, using images and an animation to aid their presentation. Later on, they also describe the Cometcloud framework they are using, this time, using a figure without animation to support their explanation. When it comes to presenting their solution, they have a clear architecture diagram, and use it to walk through exactly how their application works. In their explanation, they clearly indicate how they make use of the third party algorithm and framework within their project, so it’s very clear what parts of the overall solution are their own work.</li>
+
+              <li><b>Good use of graphs and images, minimal use of text</b></li>
+
+              <li><b>Well rehearsed, but natural presentation.</b> They talk to the audience; they don’t read their slides.</li>
+
+              <li><b>Good, concise, scripted demo:</b> Their demo works with a particular scenario which they thought about ahead of time, and is set up ahead of time such that the key feature of the application can be demonstrated. They use realistic inputs, rather than dummy inputs. They don’t waste time. If it’s not feasible to do a live demo, a video created using screen-capture software of a previously executed scripted demo can be a good alternative. Alternatively, screenshots may also be included in your presentation.</li>
+
+              <li><b>Conclusion:</b> <p>they end by summarizing their project and its significance.</p></li>
+            </ul>
+          </li>
+
+          <li>Three Minute Thesis Presentation: "Folate – getting the balance right for bowel cancer prevention". <a id="b-links" href="https://www.youtube.com/watch?v=B-B4VcaytOA">click here to watch video</a> <br/>
+          This is a presentation by a PhD/research masters candidate (not an undergraduate), but it is an excellent example of how to convey the importance as well as technical details of a research project in a concise and compelling manner. This presentation is only 3 minutes long, so not a lot of detail can be conveyed, and slides are used minimally. However, this presentation has all the important elements of a research (thesis) talk. Notice the following: <br/>
+
+          <ul>
+            <li>
+              She starts with an introduction that gives a strong motivation for the research: the prevalence of cancer but the fact that folate might prevent bowel cancer. She leads into her research question: “Is folate related to methalation and hence bowel cancer?” At this point, the audience is convinced that this is important and relevant research!
+            </li>
+            <li>
+              She goes on to describe what the “gap” in the current knowledge is, and her particular contribution to fill that gap — the method she developed, and the experiments she ran using that method. (In your cases, this might be the software you developed, and the experiments you ran using that software).
+            </li>
+
+            <li>
+              She briefly described her results, and the significance of these results.
+            </li>
+            <li>
+              She ends by describing the on-going and future work.
+            </li>
+          </ul>        
+        </li>
+
+        <li>Three Minute Thesis Presentation: “The waiting game in the movie industry: Timing decisions for DVD release”. <a id="b-links" href="https://www.youtube.com/watch?v=SI8XOGubJyY">click here to watch video</a>  <br/>
+        Like the presentations above, this one starts with a strong motivation for the research, moves on to state specifically what her research is about, and the specific research question she’s trying to answer: “How long must studios wait before releasing a DVD after a movie has been released at the box office?” Notice her use of a graph. She describes specifically what she did (created a model to determine the optimal waiting time), the results, and the significance of her work.
+        </li>
+
+        <li>
+          <b>Three Minute Thesis Presentation:</b> “Objective measurement of pain”. <a id="b-links" href="https://www.youtube.com/watch?v=0SRbUb_U7PY">click here to watch video</a>  <br/>
+          Like the two above, this presentation starts with a strong motivation for the research, what’s he’s trying to do, and how he did it.
+        </li>
+
+        <li>
+          GMIT - Mechanical Engineering - Final Year Presentation - The Stirling Engine. <a id="b-links" href="https://www.youtube.com/watch?v=4Iu9DVSWK4g">click here to watch video</a>  <br/>
+          Another undergraduate final project presentation, this time in mechanical engineering. Fairly well rehearsed.
+        </li>
+        </ul>
+        <p class="ion-padding">
+          You might also be interested in this video giving tips for preparing for a 3-minute thesis presentation: click here to watch video.
+          There are lots of good points in there, though not everything is necessarily immediately relevant for your presentations.
+        </p>
+      </div>
+    </div>
+    
+
+  </div>
+
+</ion-content>

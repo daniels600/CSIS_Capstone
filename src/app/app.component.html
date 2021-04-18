@@ -1,3 +1,111 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-item margin-bottom>
+          <ion-avatar slot="start">
+            <img src="./assets/face-icon-user.png" alt="Missing image"/>
+          </ion-avatar>
+          <ion-label>Item Avatar</ion-label>
+        </ion-item>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerLink="/general-guide">
+            <ion-icon name="reader-outline" slot="start"></ion-icon>
+            <ion-label>General guide</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/contacts">
+            <ion-icon name="speedometer-outline" slot="start"></ion-icon>
+            <ion-label> Dashboard</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/favorites">
+            <ion-icon name="create-outline" slot="start"></ion-icon>
+            <ion-label>Edit profile</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/favorites">
+            <ion-icon name='heart' slot='start'></ion-icon>
+            <ion-label>Favorites</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/favorites">
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <ion-label>Logout</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
+
+
+<!-- 
+<ion-app>
+ 
+    <ion-menu menuId="main-menu" content-id="main">
+      <ion-header>
+        <ion-toolbar color="primary" class="user-profile">
+
+          <ion-item margin-bottom>
+            <ion-avatar slot="start" class="user-avatar">
+              <img src="./assets/face-icon-user.png" alt="Missing image"/>
+            </ion-avatar>
+            <ion-label>
+              <ion-text color="medium">
+                <h1><strong>João Firmino</strong></h1>
+              </ion-text>
+              <ion-text color="secondary">
+                <h3>
+                  São Paulo, Brazil
+                </h3>
+              </ion-text>
+              <ion-menu-toggle class="mto" auto-hide="false">
+                <a class="text08" tappable>                  <ion-text color="medium">
+                    <ion-icon name="contact"></ion-icon>
+                    <strong>edit profile</strong>
+                  </ion-text>
+                </a> <ion-text color="secondary"> | </ion-text> 
+                <a class="text08" tappable (click)="logout()">
+                  <ion-text color="medium">
+                    <ion-icon name="log-out"></ion-icon>
+                    <strong>logout</strong>
+                  </ion-text>
+                </a>
+              </ion-menu-toggle>
+            </ion-label>
+          </ion-item>
+
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="bg-profile">
+        <ion-list>
+          <ion-list-header color="primary">
+            <ion-label>Menu</ion-label>
+          </ion-list-header>
+
+          <ion-menu-toggle auto-hide="false" >
+            <ion-item  color="primary">
+              <ion-icon slot="start" color="light"></ion-icon>
+              <ion-label>
+                
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
+
+</ion-app> -->

@@ -1,0 +1,30 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back" [routerLink]="['/home']"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div id="header">
+    <h1>Login</h1>
+    <img src="assets/icon/ashesi-logo.png"/>
+    <h3 id="app-name">CSIS Capstone</h3>
+  </div>
+
+
+  <div id="form">
+    <app-input placeholder="Ashesi Email" type="email" [(ngModel)]="email" ngDefaultControl></app-input>
+    <app-input placeholder="Password" type="password" [(ngModel)]="password" ngDefaultControl></app-input>
+
+    <ion-button expand="block" shape="round" (click)="login_user()">Login</ion-button>
+    <p><a [routerLink]="['/forgot-password']" id='forgot-link'>Forgot Password</a></p>
+
+    <!-- <span>Don't have an account? <a (click)="openRegister()">Sign Up</a></span> -->
+  </div>
+
+</ion-content>

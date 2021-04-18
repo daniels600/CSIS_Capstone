@@ -1,0 +1,42 @@
+ion-toolbar {
+  --border-style : none;
+}
+
+ion-header {
+  background: #ffffff;
+}
+
+ion-slides {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--ion-color-light);
+}
+
+ion-segment {
+  z-index: 10;
+  background: #ffffff;
+}
+
+ion-segment-button {
+  text-transform: none;
+}
+
+ion-avatar {
+  border: 2px solid var(--ion-color-primary);
+  padding: 2px;
+}
+
+
+ion-title {
+  text-align: center;
+}
+
+#app-name {
+  font-weight: 600;
+  // padding-bottom: 40px;
+  padding-left: 10px;
+}
+
+#seg-name {
+  font-weight: 400;
+}

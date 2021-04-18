@@ -1,0 +1,26 @@
+<ion-row class="wrapper">
+  <ion-col size="2">
+    <ion-avatar>
+   
+      <img [src]="supervisor.user_image ? 'https://apps.ashesi.edu.gh/capstone/' + supervisor.user_image.replace('..', '') : 'assets/face-icon-user.png'" alt="Missing image" onerror="this.onerror=null;this.src='assets/face-icon-user.png';" />
+      
+    </ion-avatar>
+  </ion-col>
+  <ion-col size="10">
+    <ion-row class="tweet-info">
+      <ion-col size="12">
+        <span class="name">{{ supervisor.user_fname +" "+ supervisor.user_lname}} </span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+          <div [innerHTML]="supervisor.interest" class="tweet-text"></div>
+          <!-- <ion-icon name="paper-plane-outline" color="primary"></ion-icon> -->
+          <!-- <img class="preview-img" [src]="tweet.attachment" *ngIf="tweet.attachment" alt=""> -->
+      </ion-col>
+    </ion-row>
+
+  </ion-col>
+
+</ion-row>

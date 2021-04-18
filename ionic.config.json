@@ -1,5 +1,7 @@
 {
   "name": "CSIS-Capstone",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

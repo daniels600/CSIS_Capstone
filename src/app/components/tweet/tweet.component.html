@@ -1,0 +1,31 @@
+<ion-row class="wrapper">
+  <!-- <ion-col size="2">
+    <ion-avatar>
+      <img [src]="tweet.img" alt="">
+    </ion-avatar>
+  </ion-col> -->
+  <ion-col size="10">
+    <ion-row>
+      <ion-col size="12">
+        <ion-label class="title">Student: </ion-label>
+        <span class="name">{{ tweet.Student_Name }} </span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+          <ion-label class="title">Capstone Project</ion-label>
+          <div [innerHTML]="tweet.capstone_title" class="tweet-text"></div>
+          <ion-label class="title">Type: </ion-label>
+          <span>{{tweet.capstonetype_name}}</span> <br/>
+          <ion-label class="title">Supervisor: </ion-label>
+          <span>{{tweet.Faculty_Name}}</span> <br/>
+          <ion-label class="title">Capstone year: </ion-label>
+          <span>{{tweet.capstoneyear_name}}</span>
+          <!-- <img class="preview-img" [src]="tweet.attachment" *ngIf="tweet.attachment" alt=""> -->
+      </ion-col>
+    </ion-row>
+
+  </ion-col>
+  
+</ion-row>

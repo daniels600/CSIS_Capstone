@@ -1,0 +1,38 @@
+.tweet-info {
+  font-size: 0.9em;
+}
+
+.name {
+  font-weight: 600;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.tweet-text {
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.handle {
+  padding-left: 4px;
+  color: var(--ion-color-medium)
+}
+
+.wrapper {
+  border-bottom: 1px solid var(--ion-color-light);
+}
+
+.highlight {
+  color: var(--ion-color-primary)
+}
+
+.preview-img {
+  border: 1px solid var(--ion-color-light);
+  border-radius:  10px;
+}
+
+.title {
+  padding-left: 10px;
+  color: #923D41;
+  font-weight: 600;
+}
+
