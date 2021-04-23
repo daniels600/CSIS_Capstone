@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+      <ion-title>Dashboard</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div cards>
+
+    <div class="grid-full">
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-icon name="school-sharp"></ion-icon>
+            <h1>Seniors</h1>
+            <p >{{dashboard_details.seniors}}</p>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card>
+            <ion-icon name="people-sharp"></ion-icon>
+            <h1 id='supervisors'>Supervisors</h1>
+            <p>{{dashboard_details.supervisors}}</p>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card>
+            <ion-icon name="bar-chart-sharp"></ion-icon>
+            <h1>Capstone</h1>
+            <p>{{dashboard_details.capstone}}</p>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card>
+            <ion-icon name="today-sharp"></ion-icon>
+            <h1>Upcoming</h1>
+            <p>{{dashboard_details.upcoming}}</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+
+</ion-content>
