@@ -63,7 +63,7 @@ export class ForgotPasswordPage implements OnInit {
         .then((response: HTTPResponse) => {
           console.log(`POST ${this.server} ${JSON.stringify(response.data)}`);
 
-          let m = JSON.stringify(response.data);
+          let m = response.data;
           console.log(m);
 
           if (m == 'worked') {

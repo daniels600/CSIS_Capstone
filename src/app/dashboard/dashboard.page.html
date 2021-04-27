@@ -12,7 +12,7 @@
 
     <div class="grid-full">
       <ion-row>
-        <ion-col>
+        <ion-col [routerLink]="['/tabs']" >
           <ion-card>
             <ion-icon name="school-sharp"></ion-icon>
             <h1>Seniors</h1>
@@ -22,7 +22,7 @@
 
         <ion-col>
           <ion-card>
-            <ion-icon name="people-sharp"></ion-icon>
+            <ion-icon name="people-sharp" [routerLink]="['/tabs']"></ion-icon>
             <h1 id='supervisors'>Supervisors</h1>
             <p>{{dashboard_details.supervisors}}</p>
           </ion-card>
@@ -30,7 +30,7 @@
 
         <ion-col>
           <ion-card>
-            <ion-icon name="bar-chart-sharp"></ion-icon>
+            <ion-icon name="bar-chart-sharp" [routerLink]="['/tabs']"></ion-icon>
             <h1>Capstone</h1>
             <p>{{dashboard_details.capstone}}</p>
           </ion-card>
@@ -38,7 +38,7 @@
 
         <ion-col>
           <ion-card>
-            <ion-icon name="today-sharp"></ion-icon>
+            <ion-icon name="today-sharp" [routerLink]="['/incoming-events']"></ion-icon>
             <h1>Upcoming</h1>
             <p>{{dashboard_details.upcoming}}</p>
           </ion-card>

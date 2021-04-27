@@ -6,9 +6,8 @@
           <ion-avatar slot="start">
             <img src="./assets/face-icon-user.png" alt="Missing image"/>
           </ion-avatar>
-          <ion-label>Item Avatar</ion-label>
+          <ion-label color="primary">{{user_email}}</ion-label>
         </ion-item>
-        <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
@@ -37,8 +36,8 @@
             <ion-label>Favorites</ion-label>
           </ion-item>
         </ion-menu-toggle>
-        <ion-menu-toggle>
-          <ion-item routerLink="/favorites">
+        <ion-menu-toggle (click)="logout()">
+          <ion-item>
             <ion-icon name="log-out-outline" slot="start"></ion-icon>
             <ion-label>Logout</ion-label>
           </ion-item>

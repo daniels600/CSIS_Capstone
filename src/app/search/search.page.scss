@@ -1,0 +1,29 @@
+ion-toolbar {
+    --border-style : none;
+  }
+  
+  ion-header {
+    background: #ffffff;
+  }
+
+  ion-title {
+    text-align: center;
+  }
+  
+  #app-name {
+    font-weight: 600;
+    // padding-bottom: 40px;
+    padding-left: 10px;
+  }
+
+  ion-searchbar {
+    --icon-color: #923D41;
+    --placeholder-font-weight: 600;
+    --box-shadow: none;
+    --placeholder-color: #923D41;
+  }
+
+  #search {
+      color: #923D41;
+      font-weight: 600;
+  }

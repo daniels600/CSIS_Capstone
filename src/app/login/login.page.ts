@@ -67,15 +67,15 @@ export class LoginPage implements OnInit {
         .then((response: HTTPResponse) => {
           console.log(`POST ${this.server} ${JSON.stringify(response.data)}`);
 
-          let m = JSON.stringify(response.data);
+          let m = response.data;
           console.log(m);
 
           if (m == 'success') {
             loader.dismiss();
             this.disabledbtn = false;
             this.presentToast("Login successful");
-            this.storage.set('storage_xxx', m);  //storage session
-            this.navCtrl.navigateRoot(['/tabs']);
+            this.storage.set('user_details', this.email);  //storage session
+            this.navCtrl.navigateRoot('');
           } else if(m == 'failed') {
             loader.dismiss();
             this.disabledbtn = false;

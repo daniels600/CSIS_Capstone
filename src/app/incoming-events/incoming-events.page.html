@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+      <ion-title>Incoming events</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-row class="wrapper" *ngFor="let event of incomings">
+    <!-- <ion-col size="2">
+      <ion-avatar>
+        <img [src]="tweet.img" alt="">
+      </ion-avatar>
+    </ion-col> -->
+    <ion-col size='12'>
+      <ion-row>
+        <ion-col>
+          <ion-label class="title">{{event.news_title}}</ion-label>
+          <span class="name"> </span>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col >
+            <ion-label class="title">Event Description</ion-label>
+            <div [innerHTML]="event.news_detail" class="tweet-text"></div>
+
+            <ion-item>
+              <ion-icon name="people-outline"></ion-icon>
+              <ion-label class="ion-padding">{{event.news_speakers}}</ion-label>
+            </ion-item>
+            
+            <ion-item>
+              <ion-icon name="calendar-outline"></ion-icon>
+              <ion-label class="ion-margin" id="date">Date & Time : <span>{{event.date_of_event}}</span></ion-label>
+            </ion-item>
+
+            
+        </ion-col>
+      </ion-row>
+  
+    </ion-col>
+    
+  </ion-row>
+  
+
+</ion-content>
