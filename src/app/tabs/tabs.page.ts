@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 @Component({
   selector: 'app-tabs',
@@ -16,23 +17,12 @@ export class TabsPage {
 
   constructor(
     private http: HttpClient,
-    private localNotifications: LocalNotifications
+    private localNotifications: LocalNotifications,
+    private emailComposer: EmailComposer
   ) 
   { 
     this.getIncoming()
     
-  }
-
-  single_notification() {
-    // Schedule a single notification
-    this.localNotifications.schedule({
-      id: 1,
-      text: 'Single Notification for incoming',
-      trigger: { at: new Date(2021, 3, 26, 18, 55, 0, 0) },
-      sound: 'file://sound.mp3',
-      led: 'FF0000',
-      data: { secret: 'key_data' }
-    });
   }
 
   getIncoming() {
@@ -41,7 +31,11 @@ export class TabsPage {
         this.incomings = data;
         this.numIncoming = Object.keys(this.incomings).length;
         //console.log(this.numIncoming);
-        console.log(this.reduceTime(this.incomings));
+        console.log(this.incomings);
+
+        this.incomings = this.reduceTime(this.incomings);
+
+        console.log('new arr', this.incomings);
 
         this.createNotif(this.incomings);
       }
@@ -58,9 +52,8 @@ export class TabsPage {
       this.localNotifications.schedule({
         id: data.id,
         title: data.title,
-        text: data.details,
+        text: `Scheduled on ${data.dateTime}`,
         trigger: { at: new Date(data.dateTime) },
-        smallIcon: 'res://calendar',
         sound: 'file://sound.mp3',
         led: 'FF0000',
       });
@@ -106,5 +99,11 @@ export class TabsPage {
 
     return this.newDateTime;
     
+  }
+
+  openEmailComposer(){
+      this.emailComposer.open({
+        to : "csis@ashesi.edu.gh"
+      })
   }
 }

@@ -40,8 +40,6 @@ export class AppComponent {
     
     this.storage.create();
 
-    //this.storage.set('user_details', 'eugene.daniels@ashesi.edu.gh');  //storage session
-
     this.storage.get('user_details').then((res) =>
     {
       if(res == null){
@@ -58,14 +56,7 @@ export class AppComponent {
   }
 
   ionViewDidEnter(){
-    //this.storage.clear();
-    // this.storage.get('user_details').then((res)=>{
-    //   console.log(res);
-    //   //this.data = res;
-    //   this.user_email = res;
-    //   console.log('This is the user ',this.user_email);
-    //   // this.name = this.datastorage.user_name;
-    // })
+  
     this.user_email = this.storage.get('user_details');
     console.log('This is the user ',this.user_email);
   }

@@ -5,6 +5,7 @@ import {LoadingController, NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 import { finalize } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 @Component({
   selector: 'app-tab1',
@@ -30,7 +31,8 @@ export class Tab1Page{
     private http: HttpClient,
     private accessProvider: AccessProvider,
     public loadingController: LoadingController,
-    private storage: Storage
+    private storage: Storage,
+    private emailComposer: EmailComposer
     )
     {}
   // ngOnInit() {
@@ -101,4 +103,6 @@ export class Tab1Page{
         );
   }
 
+
+  
 }

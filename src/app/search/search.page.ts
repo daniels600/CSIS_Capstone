@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PersonService, SearchType } from '../services/person.service';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 
@@ -16,7 +15,6 @@ export class SearchPage implements OnInit {
 
   results: Observable<any>;
   searchTerm: string = '';
-  type: SearchType = SearchType.all;
   allCaps: any;
   new_arr: any;
   allTitles: any = [ ];
@@ -26,7 +24,6 @@ export class SearchPage implements OnInit {
 
   constructor
   (
-    private personService: PersonService,
     private http: HttpClient,
     
   ) 
@@ -49,9 +46,6 @@ export class SearchPage implements OnInit {
     );    
   }
 
-  searchChanged(e){
-    //this.option = this.option;
-  }
 
 
 }

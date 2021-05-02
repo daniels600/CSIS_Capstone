@@ -7,14 +7,6 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'users',
-    loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule)
-  },
-  {
-    path: 'users/:id',
-    loadChildren: () => import('./users-details/users-details.module').then( m => m.UsersDetailsPageModule)
-  },
-  {
     path: 'general-guide',
     loadChildren: () => import('./general-guide/general-guide.module').then( m => m.GeneralGuidePageModule)
   },
@@ -38,6 +30,7 @@ const routes: Routes = [
     path: 'incoming-events',
     loadChildren: () => import('./incoming-events/incoming-events.module').then( m => m.IncomingEventsPageModule)
   }
+  
 ];
 @NgModule({
   imports: [

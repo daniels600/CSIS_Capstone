@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
     "@ionic-native/core": "^5.32.1",
+    "@ionic-native/email-composer": "^5.32.1",
     "@ionic-native/http": "^5.32.1",
     "@ionic-native/local-notifications": "^5.32.1",
     "@ionic-native/splash-screen": "^5.32.1",
@@ -48,6 +49,7 @@
     "cordova-plugin-advanced-http": "^3.1.0",
     "cordova-plugin-badge": "^0.8.8",
     "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-email-composer": "^0.9.2",
     "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.2.1",
@@ -80,7 +82,10 @@
       },
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-advanced-http": {},
-      "cordova-plugin-local-notification": {}
+      "cordova-plugin-local-notification": {},
+      "cordova-plugin-email-composer": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      }
     },
     "platforms": [
       "android"

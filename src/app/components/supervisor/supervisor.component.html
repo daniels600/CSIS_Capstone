@@ -12,12 +12,19 @@
         <span class="name">{{ supervisor.user_fname +" "+ supervisor.user_lname}} </span>
       </ion-col>
     </ion-row>
+    <ion-row class="tweet-info">
+      <ion-col size="12">
+        <span class="dept"> <span class="dept1">Dept:</span> {{ supervisor.department_name}} </span>
+      </ion-col>
+    </ion-row>
 
     <ion-row>
       <ion-col size="12">
+          
           <div [innerHTML]="supervisor.interest" class="tweet-text"></div>
           <!-- <ion-icon name="paper-plane-outline" color="primary"></ion-icon> -->
           <!-- <img class="preview-img" [src]="tweet.attachment" *ngIf="tweet.attachment" alt=""> -->
+          <div class="tweet-text" (click)="mailLecturer(supervisor.user_email)"><span class="dept1">Email:</span> <ion-icon name="mail-outline"></ion-icon> </div>
       </ion-col>
     </ion-row>
 

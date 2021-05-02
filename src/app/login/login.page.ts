@@ -72,10 +72,16 @@ export class LoginPage implements OnInit {
 
           if (m == 'success') {
             loader.dismiss();
+            
             this.disabledbtn = false;
             this.presentToast("Login successful");
+
+            //save the signed in user details for later login
             this.storage.set('user_details', this.email);  //storage session
+
+            //redirect to the home page
             this.navCtrl.navigateRoot('');
+
           } else if(m == 'failed') {
             loader.dismiss();
             this.disabledbtn = false;
